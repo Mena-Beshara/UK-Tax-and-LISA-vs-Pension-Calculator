@@ -136,16 +136,16 @@ Difference at age 60 (Pension - LISA): -£64,162 (LISA higher)
 ### An Example of the Calculations
 
 #### User Interface Input
-![Web-based Application UI](Lisa-pension-calculator.png)
+![Web-based Application UI](images/Lisa-pension-calculator.png)
 
 #### LISA vs Pension Bar Chart
-![LISA vs Pension Bar Chart](tax_savings_lisa_vs_pension_bar_chart.png)
+![LISA vs Pension Bar Chart](images/tax_savings_lisa_vs_pension_bar_chart.png)
 
 #### LISA vs Pension Line Chart
-![LISA vs Pension Line Chart](tax_savings_lisa_vs_pension_line_chart.png)
+![LISA vs Pension Line Chart](images/tax_savings_lisa_vs_pension_line_chart.png)
 
 #### Income Breakdown Pie Chart
-![Income Breakdown Pie Chart](income_breakdown_pie.png)
+![Income Breakdown Pie Chart](images/income_breakdown_pie.png)
 
 ## Tax Calculation Details
 
