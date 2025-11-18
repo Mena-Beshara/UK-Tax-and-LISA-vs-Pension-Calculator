@@ -206,6 +206,6 @@ This project is licensed by me and it has been developed by Mena-Beshara.
 
 - Author: [Mena-Beshara]
 - GitHub: [Mena-Beshara](https://github.com/mena-beshara)
-- Email: your.email@example.com
+- Email: MenaBeshara60@gmail.com
 
 For questions or suggestions, feel free to open an issue!
