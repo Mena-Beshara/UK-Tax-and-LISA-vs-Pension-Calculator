@@ -1,0 +1,22 @@
+[tool.black]  
+line-length = 88  
+include = '\.pyi?$'  
+exclude = '''  
+/(  
+  \.git  
+  | \.hg  
+  | \.mypy_cache  
+  | \.tox  
+  | \.venv  
+  | _build  
+  | buck-out  
+  | build  
+  | dist  
+)/  
+'''  
+
+[tool.poetry]  
+name = "uk-tax-savings-calculator"  
+version = "0.1.0"  
+description = "UK Tax and Savings Projection App"  
+authors = ["MenaBeshara60@gmail.com"]  
