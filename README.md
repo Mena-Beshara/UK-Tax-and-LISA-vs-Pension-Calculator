@@ -467,31 +467,6 @@ If you encounter any issues, have questions, or want to provide feedback:
 4. **Request web app access**: If you're not familiar with Python, contact me for the hosted version
 
 **Your feedback helps improve this tool for everyone!**
-
-## 🗺️ Roadmap
-
-### Version 0.2.0 (Q1 2026)
-- [ ] Add Scottish tax rates support
-- [ ] Include student loan calculations (Plan 1, 2, 4, Postgraduate)
-- [ ] Add employer contribution modeling
-- [ ] Implement data persistence (save/load scenarios)
-- [ ] Add inflation adjustment options
-
-### Version 0.3.0 (Q2 2026)
-- [ ] Multi-scenario comparison tool
-- [ ] Historical tax rate data integration
-- [ ] PDF report generation
-- [ ] Salary sacrifice calculator
-- [ ] Marriage allowance optimizer
-
-### Version 1.0.0 (Q3 2026)
-- [ ] User authentication system
-- [ ] Cloud deployment (AWS/Azure/GCP)
-- [ ] Mobile app version (React Native)
-- [ ] API for programmatic access
-- [ ] Advanced portfolio optimization
-- [ ] Machine learning for personalized recommendations
-
 ## 📚 Additional Resources
 
 ### Official UK Tax & Savings Information
@@ -518,5 +493,6 @@ If you encounter any issues, have questions, or want to provide feedback:
 ---
 
 **Made with ❤️ for better financial planning and data-driven decision making**
+
 
 *A data science project demonstrating the power of predictive modeling in personal finance*
