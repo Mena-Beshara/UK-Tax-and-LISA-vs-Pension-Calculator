@@ -49,7 +49,7 @@ def display_tax_analysis(tax_data: dict, income_pre_tax: int):
         showlegend=False  
     )  
       
-    st.plotly_chart(fig_pie, use_container_width=True)  
+    st.plotly_chart(fig_pie, width='stretch')  
 
 # --- Savings Projection Tab (Tab 2) ---  
 
@@ -82,7 +82,7 @@ def display_savings_projection_charts(df: pd.DataFrame, age: int, lisa_years_con
         fig_line.add_vline(x=50, line_dash="dash", annotation_text="Age 50 (Contribs Stop)")  
           
     fig_line.update_layout(hovermode="x unified")  
-    st.plotly_chart(fig_line, use_container_width=True)  
+    st.plotly_chart(fig_line, width='stretch')  
       
     st.divider()  
       

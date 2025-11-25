@@ -467,6 +467,8 @@ If you encounter any issues, have questions, or want to provide feedback:
 4. **Request web app access**: If you're not familiar with Python, contact me for the hosted version
 
 **Your feedback helps improve this tool for everyone!**
+
+
 ## 📚 Additional Resources
 
 ### Official UK Tax & Savings Information
@@ -493,6 +495,5 @@ If you encounter any issues, have questions, or want to provide feedback:
 ---
 
 **Made with ❤️ for better financial planning and data-driven decision making**
-
 
 *A data science project demonstrating the power of predictive modeling in personal finance*
