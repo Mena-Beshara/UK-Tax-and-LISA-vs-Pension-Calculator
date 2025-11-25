@@ -232,13 +232,16 @@ Open your browser and navigate to:
 http://localhost:8501
 ```
 
-### 🌐 Web Application Access
+🌐 Web Application Access
+Not familiar with Python? No problem! I've built a web-based version that's accessible directly through your browser—no installation required.
 
-**Not familiar with Python?** No problem! I've built a web-based version that's accessible directly through your browser—no installation required.
+🚀 Try it now: https://uk-tax-and-lisa-vs-pension-calculator-v1.streamlit.app/
 
-**Contact me for access**: MenaBeshara60@gmail.com
+Simply click the link above to access the hosted application and start calculating immediately!
 
-Simply send me an email, and I'll provide you with the link to the hosted application where you can start calculating immediately!
+Questions or feedback? Feel free to reach out at MenaBeshara60@gmail.com
+
+
 
 ## 📁 Project Structure
 
