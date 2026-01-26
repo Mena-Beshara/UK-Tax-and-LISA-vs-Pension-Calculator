@@ -1,0 +1,39 @@
+# Development files
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Documentation
+docs/
+references/
+*.md
+README.md
+LICENSE
+
+# Testing
+tests/
+
+# Git
+.git/
+.gitignore
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Other
+Makefile
+setup.cfg
+pyproject.toml
