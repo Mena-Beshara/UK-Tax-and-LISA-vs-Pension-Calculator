@@ -1,5 +1,4 @@
 import numpy as np  
-# FIXED: Changed to absolute import
 from uk_tax_savings.config import (  
     PA, BR_END, HR_TRAP_START, AR_START,  
     BR_TAX_RATE, HR_TAX_RATE, AR_TAX_RATE,  
