@@ -6,7 +6,27 @@ A comprehensive Streamlit-based web application for calculating UK income tax, N
 ![Streamlit](https://img.shields.io/badge/streamlit-1.29.0-red.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-## 🎯 Project Origin & Motivation
+---
+
+## 📊 Key Finding: Are You Leaving £419,000 on the Table?
+
+> **TL;DR** — For UK professionals contributing £4,000/year over a full career, choosing the wrong savings vehicle isn't a small optimisation problem. The data shows a **112.8% (£419,067) difference in ROI** between a LISA and a Pension under the right conditions.
+
+![Project Impact Dashboard](assets/impact_dashboard.png)
+
+Most comparisons of LISA vs. Pension rely on simplified assumptions or incomplete modelling. This project takes a different approach: a **reproducible, data-driven experiment** built in Python that models both vehicles end-to-end — including UK tax bands, NI contributions, government bonus mechanics, compound growth, and management fees — then projects outcomes from your current age to 60.
+
+The experiment used:
+- **£4,000/year** contributions (LISA annual cap, maximising the government bonus)
+- **Full career horizon** from age 25 to 60
+- **Accurate 2025/26 UK tax rates** including Personal Allowance tapering
+- **Scenario-specific tax relief** applied dynamically to pension contributions
+
+The result: a LISA outperforms a pension by £419,067 for a basic-rate taxpayer under these conditions — a finding that isn't obvious without modelling the full picture. Want to run it against your own numbers? The Streamlit app lets you plug in your income, age, and contribution rate and see the projections instantly.
+
+---
+
+## ðŸŽ¯ Project Origin & Motivation
 
 As a Data Scientist passionate about personal finance management, I'm always honing my data analysis skills to ask the right questions, uncover insights, and create visualizations that drive better decision-making. This project started when I pondered a key financial dilemma: **For long-term savings in the UK, is a Lifetime ISA (LISA) superior due to its tax-free withdrawals, or does a workplace pension win with upfront tax relief?**
 
@@ -19,15 +39,15 @@ Unable to find clear, data-driven answers online, I decided to build my own pred
 I began by gathering verifiable data from official sources:
 
 - **UK Tax Bands (2025/26)** from [GOV.UK](https://www.gov.uk/income-tax-rates):
-  - Personal Allowance: up to £12,570 at 0%
-  - Basic Rate: £12,571 to £50,270 at 20%
-  - Higher Rate: £50,271 to £125,140 at 40%
-  - Additional Rate: over £125,140 at 45%
+  - Personal Allowance: up to Â£12,570 at 0%
+  - Basic Rate: Â£12,571 to Â£50,270 at 20%
+  - Higher Rate: Â£50,271 to Â£125,140 at 40%
+  - Additional Rate: over Â£125,140 at 45%
 
 - **National Insurance Rates** (employee contributions):
-  - 0% up to £12,570/year
-  - 8% on earnings between £12,571 and £50,270
-  - 2% above £50,270
+  - 0% up to Â£12,570/year
+  - 8% on earnings between Â£12,571 and Â£50,270
+  - 2% above Â£50,270
 
 - **Historical Returns Research**:
   - UK workplace pensions: 5-8% annual growth over recent five-year periods (PensionBee, September 2024)
@@ -35,15 +55,15 @@ I began by gathering verifiable data from official sources:
   - Stocks-and-shares LISAs: can match market returns of 5-7% historically
 
 - **LISA Rules** (HMRC guidelines):
-  - Annual contribution cap: £4,000
-  - Government bonus: 25% (up to £1,000 free per year)
+  - Annual contribution cap: Â£4,000
+  - Government bonus: 25% (up to Â£1,000 free per year)
   - Contribution age limit: 18-50
 
 **2. Prototyping in Excel**
 
 I organized my thoughts in Excel first, building a predictive model with formulas for:
 - Compound growth calculations
-- Tax breakdowns (including personal allowance tapering over £100,000)
+- Tax breakdowns (including personal allowance tapering over Â£100,000)
 - 1% LISA management fee approximation
 - Projections from current age to 60
 
@@ -65,10 +85,10 @@ To sharpen my Python skills and make the model dynamic, I migrated everything to
 - **Plotly** for interactive charts
 - **NumPy** for efficient numerical computations
 
-This made the model truly dynamic—users can input their specific parameters:
+This made the model truly dynamicâ€”users can input their specific parameters:
 - Income level
 - Current age
-- Weekly contributions (e.g., £50 for partial max)
+- Weekly contributions (e.g., Â£50 for partial max)
 - Expected LISA interest rate (e.g., 7%)
 
 The result: customized projections and interactive visualizations tailored to individual circumstances.
@@ -83,22 +103,22 @@ After refining the model and receiving encouragement from my mentor, I built thi
 
 The goal: make this simple yet powerful tool accessible to everyone, not just those familiar with Python or data analysis.
 
-## 📊 Key Findings from the Analysis
+## ðŸ“Š Key Findings from the Analysis
 
 After extensive modeling and scenario testing, here are the data-driven conclusions:
 
-### 1. Higher-Rate Taxpayers (earning over £50,270)
+### 1. Higher-Rate Taxpayers (earning over Â£50,270)
 **Recommendation**: Balance between LISA and pension contributions
 
 **Why?**
 - Pensions offer 40-45% tax relief (claimable via self-assessment per HMRC)
 - Higher tax relief often outweighs the 25% LISA bonus
-- Consider maxing out LISA (£4,000/year) for the guaranteed bonus, then prioritizing pension
+- Consider maxing out LISA (Â£4,000/year) for the guaranteed bonus, then prioritizing pension
 - The tax relief on pensions becomes increasingly valuable at higher income levels
 
-**Example**: A £100 pension contribution only costs you £60 (or even £55 at additional rate)
+**Example**: A Â£100 pension contribution only costs you Â£60 (or even Â£55 at additional rate)
 
-### 2. Basic-Rate Taxpayers (up to £50,270)
+### 2. Basic-Rate Taxpayers (up to Â£50,270)
 **Recommendation**: LISAs often outperform
 
 **Why?**
@@ -107,19 +127,19 @@ After extensive modeling and scenario testing, here are the data-driven conclusi
 - Pension withdrawals are subject to income tax (25% tax-free, then marginal rate)
 - Greater flexibility with LISA for first-time home purchase
 
-**Example**: £4,000 LISA contribution becomes £5,000 immediately with government bonus
+**Example**: Â£4,000 LISA contribution becomes Â£5,000 immediately with government bonus
 
 ### 3. Additional Insights
 - **Volatility matters**: Stocks-and-shares LISAs can achieve higher returns but come with risk
 - **Time horizon**: The earlier you start, the more compound growth amplifies differences
 - **Tax rate changes**: If you expect your tax rate to drop in retirement, pensions become more attractive
-- **Flexibility**: LISAs offer more liquidity for first-time home purchases (up to £450,000)
+- **Flexibility**: LISAs offer more liquidity for first-time home purchases (up to Â£450,000)
 
-## 🎯 Features
+## ðŸŽ¯ Features
 
 ### Tax Calculation
 - **Accurate UK Tax Bands**: Uses 2025/26 tax rates for England, Wales, and Northern Ireland
-- **Personal Allowance Tapering**: Automatically calculates PA erosion for high earners (£100,000+)
+- **Personal Allowance Tapering**: Automatically calculates PA erosion for high earners (Â£100,000+)
 - **National Insurance**: Includes both primary and secondary NI thresholds
 - **Effective Tax Rate**: Displays your true tax burden as a percentage
 - **Visual Breakdown**: Interactive pie chart showing income distribution
@@ -127,7 +147,7 @@ After extensive modeling and scenario testing, here are the data-driven conclusi
 ### Savings Projection
 - **LISA vs Pension Comparison**: Side-by-side comparison of both savings vehicles
 - **Tax Relief Modeling**: Accurately models pension tax relief at your marginal rate
-- **LISA Government Bonus**: Includes 25% government bonus (up to £1,000/year)
+- **LISA Government Bonus**: Includes 25% government bonus (up to Â£1,000/year)
 - **Compound Growth**: Projects growth from current age to 60
 - **Interactive Charts**: 
   - Plotly interactive line charts with hover details
@@ -140,54 +160,54 @@ After extensive modeling and scenario testing, here are the data-driven conclusi
 - **Tabbed Interface**: Organized display of tax analysis, projections, and raw data
 - **Input Validation**: Prevents invalid entries and provides helpful tooltips
 
-## 📈 How It Works
+## ðŸ“ˆ How It Works
 
 ### Tax Calculation Logic
 The calculator implements the UK tax system with the following bands (2025/26):
 
 | Income Range | Tax Rate | Notes |
 |-------------|----------|-------|
-| £0 - £12,570 | 0% | Personal Allowance |
-| £12,571 - £50,270 | 20% | Basic Rate |
-| £50,271 - £125,140 | 40% | Higher Rate |
-| £125,140+ | 45% | Additional Rate |
+| Â£0 - Â£12,570 | 0% | Personal Allowance |
+| Â£12,571 - Â£50,270 | 20% | Basic Rate |
+| Â£50,271 - Â£125,140 | 40% | Higher Rate |
+| Â£125,140+ | 45% | Additional Rate |
 
 **Special Rules:**
-- Personal Allowance reduces by £1 for every £2 earned over £100,000
-- National Insurance: 8% on £12,571-£50,270, then 2% above
+- Personal Allowance reduces by Â£1 for every Â£2 earned over Â£100,000
+- National Insurance: 8% on Â£12,571-Â£50,270, then 2% above
 - Completely accurate for England, Wales, and Northern Ireland (Scotland has different rates)
 
 ### LISA Calculation
 A Lifetime ISA is designed for first-time homebuyers and retirement savings:
 
-- **Government Bonus**: 25% on contributions up to £4,000/year (max £1,000 bonus)
+- **Government Bonus**: 25% on contributions up to Â£4,000/year (max Â£1,000 bonus)
 - **Contribution Period**: From age 18-50
 - **Growth Period**: Continues growing until age 60
 - **Management Fees**: Assumes 1% annual fee (adjustable in code)
-- **Weekly Contribution Cap**: £76.92/week = £4,000/year for max bonus
+- **Weekly Contribution Cap**: Â£76.92/week = Â£4,000/year for max bonus
 
 **Formula**: 
 ```
-Year N Value = (Previous Year × (1 + Interest Rate) + Annual Contribution × 1.25) × 0.99
+Year N Value = (Previous Year Ã— (1 + Interest Rate) + Annual Contribution Ã— 1.25) Ã— 0.99
 ```
 
 ### Pension Calculation
 Workplace pensions benefit from automatic tax relief:
 
 - **Tax Relief**: Contributions receive tax relief at your marginal rate
-  - Basic rate (20%): £80 contribution → £100 in pension
-  - Higher rate (40%): £80 contribution → £133.33 effective (via self-assessment)
-  - Additional rate (45%): £80 contribution → £145.45 effective
+  - Basic rate (20%): Â£80 contribution â†’ Â£100 in pension
+  - Higher rate (40%): Â£80 contribution â†’ Â£133.33 effective (via self-assessment)
+  - Additional rate (45%): Â£80 contribution â†’ Â£145.45 effective
 - **Contribution Period**: From current age to 50
 - **Growth Rate**: Assumes 4% annual growth (conservative estimate)
 - **Access**: Can access from age 55 (increasing to 57 in 2028)
 
 **Formula**:
 ```
-Pension Contribution = Weekly Payment × 52 × (1 / (1 - Tax Rate))
+Pension Contribution = Weekly Payment Ã— 52 Ã— (1 / (1 - Tax Rate))
 ```
 
-## 🚀 Installation
+## ðŸš€ Installation
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -232,40 +252,37 @@ Open your browser and navigate to:
 http://localhost:8501
 ```
 
-🌐 Web Application Access
-Not familiar with Python? No problem! I've built a web-based version that's accessible directly through your browser—no installation required.
+### ðŸŒ Web Application Access
 
-🚀 Try it now: https://uk-tax-and-lisa-vs-pension-calculator-v1.streamlit.app/
+**Not familiar with Python?** No problem! I've built a web-based version that's accessible directly through your browserâ€”no installation required.
 
-Simply click the link above to access the hosted application and start calculating immediately!
+**Contact me for access**: MenaBeshara60@gmail.com
 
-Questions or feedback? Feel free to reach out at MenaBeshara60@gmail.com
+Simply send me an email, and I'll provide you with the link to the hosted application where you can start calculating immediately!
 
-
-
-## 📁 Project Structure
+## ðŸ“ Project Structure
 
 ```
 uk-tax-savings-calculator/
-├── uk_tax_savings/
-│   ├── __init__.py              # Package initialization
-│   ├── app.py                   # Main Streamlit application
-│   ├── config.py                # Tax rates and constants
-│   ├── tax_calculator.py        # Tax and NI calculation logic
-│   ├── plots.py                 # Visualization functions
-│   ├── modeling/
-│   │   ├── __init__.py
-│   │   └── predict.py           # Savings projection model
-│   ├── dataset.py               # Placeholder for data functions
-│   └── features.py              # Placeholder for feature engineering
-├── requirements.txt             # Python dependencies
-├── pyproject.toml              # Project metadata
-├── setup.cfg                   # Linting configuration
-├── README.md                   # This file
-└── Makefile                    # Build commands (optional)
+â”œâ”€â”€ uk_tax_savings/
+â”‚   â”œâ”€â”€ __init__.py              # Package initialization
+â”‚   â”œâ”€â”€ app.py                   # Main Streamlit application
+â”‚   â”œâ”€â”€ config.py                # Tax rates and constants
+â”‚   â”œâ”€â”€ tax_calculator.py        # Tax and NI calculation logic
+â”‚   â”œâ”€â”€ plots.py                 # Visualization functions
+â”‚   â”œâ”€â”€ modeling/
+â”‚   â”‚   â”œâ”€â”€ __init__.py
+â”‚   â”‚   â””â”€â”€ predict.py           # Savings projection model
+â”‚   â”œâ”€â”€ dataset.py               # Placeholder for data functions
+â”‚   â””â”€â”€ features.py              # Placeholder for feature engineering
+â”œâ”€â”€ requirements.txt             # Python dependencies
+â”œâ”€â”€ pyproject.toml              # Project metadata
+â”œâ”€â”€ setup.cfg                   # Linting configuration
+â”œâ”€â”€ README.md                   # This file
+â””â”€â”€ Makefile                    # Build commands (optional)
 ```
 
-## 🎮 Usage Guide
+## ðŸŽ® Usage Guide
 
 ### Basic Usage
 
@@ -278,25 +295,25 @@ uk-tax-savings-calculator/
 ### Example Scenarios
 
 #### Scenario 1: Basic Rate Taxpayer
-- Income: £35,000
+- Income: Â£35,000
 - Age: 25
-- Weekly Contribution: £50
+- Weekly Contribution: Â£50
 - Expected Interest: 5%
 
 **Result**: LISA and pension perform similarly, with LISA having slight edge due to government bonus and tax-free withdrawals.
 
 #### Scenario 2: Higher Rate Taxpayer
-- Income: £75,000
+- Income: Â£75,000
 - Age: 30
-- Weekly Contribution: £76.92 (max LISA)
+- Weekly Contribution: Â£76.92 (max LISA)
 - Expected Interest: 6%
 
 **Result**: Pension typically outperforms LISA due to 40% tax relief vs 25% LISA bonus. Consider splitting contributions.
 
 #### Scenario 3: Additional Rate Taxpayer
-- Income: £150,000
+- Income: Â£150,000
 - Age: 35
-- Weekly Contribution: £100
+- Weekly Contribution: Â£100
 - Expected Interest: 7%
 
 **Result**: Pension significantly outperforms LISA (45% tax relief). Max out LISA for diversity, prioritize pension for remainder.
@@ -319,7 +336,7 @@ uk-tax-savings-calculator/
 - Useful for detailed financial planning
 - Can import into Excel/Google Sheets for further analysis
 
-## ⚙️ Configuration
+## âš™ï¸ Configuration
 
 ### Modifying Tax Rates
 Edit `uk_tax_savings/config.py`:
@@ -343,22 +360,22 @@ LISA_BONUS_FACTOR = 1.25     # 25% government bonus
 FEE_FACTOR = 0.99            # 1% annual management fee
 ```
 
-## ⚠️ Limitations & Disclaimers
+## âš ï¸ Limitations & Disclaimers
 
 **IMPORTANT**: This is an illustrative data science tool with limitations. This calculator provides **estimates only** and does not account for:
 
-- ❌ Student loan repayments (Plan 1, 2, 4, or Postgraduate)
-- ❌ Pension salary sacrifice arrangements
-- ❌ Scottish income tax rates (which differ from England/Wales/NI)
-- ❌ Welsh income tax rates (minimal differences)
-- ❌ Marriage allowance transfers
-- ❌ Childcare vouchers or other salary sacrifice schemes
-- ❌ Dividend income tax
-- ❌ Capital gains tax
-- ❌ Inflation adjustments
-- ❌ Future changes in tax policy or rates
-- ❌ Employer pension contributions (beyond tax relief)
-- ❌ LISA withdrawal penalties (25% if withdrawn before 60 for non-qualifying reasons)
+- âŒ Student loan repayments (Plan 1, 2, 4, or Postgraduate)
+- âŒ Pension salary sacrifice arrangements
+- âŒ Scottish income tax rates (which differ from England/Wales/NI)
+- âŒ Welsh income tax rates (minimal differences)
+- âŒ Marriage allowance transfers
+- âŒ Childcare vouchers or other salary sacrifice schemes
+- âŒ Dividend income tax
+- âŒ Capital gains tax
+- âŒ Inflation adjustments
+- âŒ Future changes in tax policy or rates
+- âŒ Employer pension contributions (beyond tax relief)
+- âŒ LISA withdrawal penalties (25% if withdrawn before 60 for non-qualifying reasons)
 
 **Important Notes:**
 - LISA withdrawals before 60 (except for first home purchase or terminal illness) incur a 25% penalty
@@ -366,9 +383,9 @@ FEE_FACTOR = 0.99            # 1% annual management fee
 - Investment returns are not guaranteed and can be negative
 - Past performance does not indicate future results
 
-**⚖️ Legal Disclaimer**: This tool is for educational and planning purposes only. It is NOT financial advice. Always check [GOV.UK](https://www.gov.uk/) for the most current tax information and consult with a qualified financial advisor before making investment decisions. Do your own research.
+**âš–ï¸ Legal Disclaimer**: This tool is for educational and planning purposes only. It is NOT financial advice. Always check [GOV.UK](https://www.gov.uk/) for the most current tax information and consult with a qualified financial advisor before making investment decisions. Do your own research.
 
-## 🛠️ Development
+## ðŸ› ï¸ Development
 
 ### Running Tests
 ```bash
@@ -397,7 +414,7 @@ pip install flake8
 flake8 uk_tax_savings/
 ```
 
-## 📝 Contributing
+## ðŸ“ Contributing
 
 Contributions are welcome! This is a learning project, and I'm eager to collaborate with other data scientists and developers interested in fintech applications.
 
@@ -420,7 +437,7 @@ Contributions are welcome! This is a learning project, and I'm eager to collabor
 - Inflation adjustment features
 - API development for programmatic access
 
-## 💬 Let's Connect!
+## ðŸ’¬ Let's Connect!
 
 I'm passionate about data-driven finance and always looking to connect with like-minded professionals!
 
@@ -432,23 +449,23 @@ I'm passionate about data-driven finance and always looking to connect with like
 - Open-source collaboration
 
 **Reach out:**
-- 📧 Email: MenaBeshara60@gmail.com
-- 💼 GitHub: (https://github.com/Mena-Beshara)
-- 🔗 LinkedIn: https://www.linkedin.com/in/menabeshara/
+- ðŸ“§ Email: MenaBeshara60@gmail.com
+- ðŸ’¼ GitHub: (https://github.com/Mena-Beshara)
+- ðŸ”— LinkedIn: https://www.linkedin.com/in/menabeshara/
 
 **Thoughts on LISA vs. pension? Let's discuss!**
 
-## 📄 License
+## ðŸ“„ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👤 Author
+## ðŸ‘¤ Author
 
 **Mena Beshara**
 - Email: MenaBeshara60@gmail.com
 - Role: Data Scientist passionate about personal finance and predictive modeling
 
-## 🙏 Acknowledgments
+## ðŸ™ Acknowledgments
 
 - Special thanks to my mentor who encouraged me to publish this project
 - Built with [Streamlit](https://streamlit.io/) - making data science applications accessible
@@ -460,7 +477,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Pension data from [PensionBee](https://www.pensionbee.com/)
 - LISA rates from [Moneyfacts](https://moneyfacts.co.uk/)
 
-## 📞 Support & Feedback
+## ðŸ“ž Support & Feedback
 
 If you encounter any issues, have questions, or want to provide feedback:
 
@@ -472,7 +489,7 @@ If you encounter any issues, have questions, or want to provide feedback:
 **Your feedback helps improve this tool for everyone!**
 
 
-## 📚 Additional Resources
+## ðŸ“š Additional Resources
 
 ### Official UK Tax & Savings Information
 - [GOV.UK - Income Tax Rates](https://www.gov.uk/income-tax-rates)
@@ -497,6 +514,6 @@ If you encounter any issues, have questions, or want to provide feedback:
 
 ---
 
-**Made with ❤️ for better financial planning and data-driven decision making**
+**Made with â¤ï¸ for better financial planning and data-driven decision making**
 
 *A data science project demonstrating the power of predictive modeling in personal finance*
