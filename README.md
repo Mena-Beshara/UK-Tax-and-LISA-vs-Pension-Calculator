@@ -10,7 +10,7 @@ A comprehensive Streamlit-based web application for calculating UK income tax, N
 
 ## 📊 Key Finding: Are You Leaving £419,000 on the Table?
 
-> **TL;DR** — For UK professionals contributing £4,000/year over a full career, choosing the wrong savings vehicle isn't a small optimisation problem. The data shows a **112.8% (£419,067) difference in ROI** between a LISA and a Pension under the right conditions.
+> **TLDR** — For UK professionals contributing £4,000/year over a full career, choosing the wrong savings vehicle isn't a small optimisation problem. The data shows a **112.8% (£419,067) difference in ROI** between a LISA and a Pension under the right conditions.
 
 ![Project Impact Dashboard](assets/impact_dashboard.png)
 
